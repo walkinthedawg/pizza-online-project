@@ -1,4 +1,4 @@
-# WALKINTHEDAWG BAND
+# Online Pizza Project #4
 Welcome to the Walkin the Dawg Band site!
 We are a Classic Rock and Roll Band based in the Sacramento CA area.
 This site is for the use of promotion of the band.
