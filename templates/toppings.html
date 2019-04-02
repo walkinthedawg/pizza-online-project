@@ -1,0 +1,18 @@
+{% extends 'base.html'%} 
+{% block content %}
+
+<h3>Choose Toppings</h3>
+<form action="{{ url_for('checkout') }}" method="POST" class="col s12">
+    {% for topping in toppings %}
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="category_name" name="category_name" type="checkbox" value={{topping.name}}>{{topping.name}}
+        </div>
+    </div>
+
+    {% endfor %}
+        <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Make it!</button>
+        </div>
+</form>
+{% endblock %}

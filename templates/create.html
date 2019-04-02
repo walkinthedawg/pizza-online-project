@@ -1,0 +1,16 @@
+{% extends 'base.html'%} {% block content %}
+<div class="row">
+
+    
+        <div>
+            <strong>Hi {{ firstname }}. You may proceed to build your pizza!</strong>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <a href="{{url_for('toppings')}}"><button type="submit" class="waves-effect waves-light btn btn_small">Proceed!</button></a>
+            </div>
+        </div>
+    
+   
+
+    </div>
+</div>
+{% endblock %}

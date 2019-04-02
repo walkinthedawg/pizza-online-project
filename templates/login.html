@@ -1,0 +1,32 @@
+{% extends 'base.html'%} {% block content %}
+
+   
+        
+        <div class="row">Enter your username for account verification
+        </div>
+        <div class="row">
+            <form action="{{ url_for('login') }}"  method="POST" >
+            <input type="text" name="username"/>
+            <input type="submit" value="Submit"/>
+            </form>  
+        </div>
+        <div class="row">
+            {% if not the_user %}
+                <div>
+                    <strong>Unable to find that name.  Try again or Sign Up to create an account!</strong>
+                </div> 
+            {% endif %}
+            {% if the_user %}
+            {% for user in the_user %}  
+                <div>
+                    <strong>Hi {{ user.firstname }}. You may proceed to build your pizza!</strong>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <a href="{{url_for('toppings')}}"><button type="submit" class="waves-effect waves-light btn btn_small">Proceed!</button></a>
+                    </div>
+                </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+   
+
+{% endblock %}

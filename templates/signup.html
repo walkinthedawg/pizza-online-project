@@ -1,0 +1,37 @@
+{% extends 'base.html'%} {% block content %}
+<div class="row">
+            <div class="row">
+            To Sign Up please enter the following info!
+        </div>
+    <form action="{{ url_for('create') }}" method="POST" class="col s12">
+        <input type="text" name="username"/>Username<br>
+        <input type="text" name="firstname"/>First Name<br>
+        <input type="text" name="address1"/>Address<br>
+        <input type="text" name="city"/>City<br>
+        <input type="text" name="zip"/>Zip<br>
+        
+    
+            <div class="row">
+            <button class="btn waves-effect waves-light" type="submit" >Sign Me Up!</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+<div class="menu_box">
+    <ul class="collapsible">
+        <h3> Add Author </h3><br>
+        <form action="{{ url_for('insert_author') }}" method="POST" class="col s12">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">face</i>
+                <input id="author" name="author" type="text" required>
+                <label for="author">Author's Name</label>
+            </div>
+            <div class="input-field  col s6">
+                <button class="btn waves-effect waves-light button-right" type="submit" >Submit
+                    <i class="material-icons right">playlist_add</i>
+                </button>
+            </div>
+        </form>
+        <br><br><br>
+    </ul>
+</div>

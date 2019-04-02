@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="heading-text">
+            <strong>Welcome to Woodys Online Pizza</strong>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="collapsible-header">
+        <div class="directions">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <a href="{{url_for('login')}}"><button type="submit" class="waves-effect waves-light btn btn_small">Login</button></a>Already a customer?<br>
+                    <a href="{{url_for('signup')}}"><button type="submit" class="waves-effect waves-light btn btn_small">Sign up</button></a>New to Woodys?<br>
+                    <a href="{{url_for('toppings')}}"><button type="submit" class="waves-effect waves-light btn btn_small">Login as Guest</button></a>Just get me a pizza!
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}       
+
